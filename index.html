@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>История бренда · от осетровой фермы до крема</title>
+<meta name="description" content="Демо-страница «История бренда»: хронология с 1978 года до ноября 2025, достижения и отличия бренда косметики на основе чёрной икры.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2711%27 fill=%27%230d1e25%27/%3E%3Ccircle cx=%2712.5%27 cy=%2712.5%27 r=%273%27 fill=%27%23e8ece6%27 opacity=%27.55%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- тема: жемчужная бумага, чернила холодной воды, икорный янтарь -------------- */
+  .v-page {
+    --v-canvas: #e8ece6; --v-surface: #f4f6f1;
+    --v-ink: #0d1e25; --v-ink-soft: #4f6469;
+    --v-accent: #8a5a12; --v-accent-ink: #fbf5e8;
+    --v-font-display: "Prata", "Georgia", serif;
+    --v-font-text: "Onest", "Segoe UI", system-ui, sans-serif;
+    --v-shadow-color: 13 30 37;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .08), 0 6px 18px rgb(var(--v-shadow-color) / .08);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .08), 0 18px 48px rgb(var(--v-shadow-color) / .14);
+    --v-radius: 6px;
+    --v-measure: 56ch;
+    --v-display-weight: 400;
+    transition: none;
+  }
+  .v-page .v-display { font-weight: 400; letter-spacing: -0.012em; line-height: 1.06; }
+  .v-page .v-display--xl { letter-spacing: -0.02em; line-height: 1; }
+  .v-page .v-btn { border-radius: 4px; box-shadow: none; }
+  .v-page a.v-btn { color: var(--v-accent-ink); }
+  .v-page .v-btn:hover { box-shadow: var(--v-e1); }
+  .v-page .v-label { font-weight: 500; }
+  .v-page img { content-visibility: auto; }
+
+  /* ---- шапка ------------------------------------------------------------------- */
+  .top { position: fixed; z-index: 40; inset: 0 0 auto 0; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: .85rem var(--v-gutter); background: rgb(232 236 230 / .9); color: #0d1e25; backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(13 30 37 / .14); }
+  .top__mark { font-family: var(--v-font-display); font-size: var(--v-t-lg); text-decoration: none; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: .55em; }
+  .top__mark i { width: .62em; height: .62em; border-radius: 50%; background: var(--v-ink); box-shadow: inset .12em .12em 0 -.02em color-mix(in oklab, var(--v-canvas) 60%, transparent); }
+  .top nav { display: flex; gap: var(--v-6); font-size: var(--v-t-sm); }
+  .top nav a { text-decoration: none; color: #4f6469; padding: .4rem 0; transition: color .16s var(--v-ease-out); }
+  .top .v-btn { padding: .7em 1.2em; }
+  @media (hover: hover) and (pointer: fine) { .top nav a:hover { color: #0d1e25; } }
+  @media (max-width: 860px) { .top nav { display: none; } }
+
+  /* ---- плашка для заказчика ---------------------------------------------------------- */
+  .demo-for { display: inline-flex; align-items: center; gap: .6rem; margin-bottom: var(--v-5); padding: .45rem .8rem; border-radius: 999px;
+    background: var(--v-surface); box-shadow: inset 0 0 0 1px var(--v-hair-strong); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .demo-for img { width: 1.6rem; height: 1.6rem; border-radius: 50%; object-fit: cover; }
+
+  /* ---- акт 1: первый экран ---------------------------------------------------------- */
+  .hero [data-v-stage] { background: var(--v-canvas); }
+  .hero .v-fill img { object-position: 60% 50%; transform: scale(1.08); }
+  .hero__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to right, rgb(232 236 230 / .92) 0%, rgb(232 236 230 / .6) 34%, rgb(232 236 230 / 0) 58%); }
+  .hero__copy { position: absolute; z-index: 3; left: var(--v-gutter); top: 53%; transform: translateY(-50%); max-width: 56rem; }
+  .hero__copy h1 { font-size: clamp(2.7rem, 1rem + 4.2vw, 5rem); max-width: 17ch; }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 32ch; color: var(--v-ink); }
+  .hero__copy .v-btn { margin-top: var(--v-6); }
+  @media (max-width: 860px) {
+    .hero .v-fill { bottom: 44svh; }
+    .hero .v-fill img { object-position: 70% 50%; transform: none; }
+    .hero__scrim { background: linear-gradient(to top, rgb(232 236 230 / 1) 0%, rgb(232 236 230 / 1) 46%, rgb(232 236 230 / 0) 62%); }
+    .hero__copy { top: auto; bottom: clamp(1.5rem, 5svh, 3rem); transform: none; padding-top: 0; right: var(--v-gutter); }
+    .hero__copy h1 { font-size: clamp(2.2rem, 1.2rem + 5.4vw, 3.2rem); max-width: none; }
+    .hero__copy .v-lede { margin-top: var(--v-3); font-size: var(--v-t-base); }
+    .hero__copy .v-btn { margin-top: var(--v-4); }
+    .demo-for { margin-bottom: var(--v-3); }
+  }
+
+  /* ---- акт 2: хронология, лента ---------------------------------------------------------- */
+  .tl [data-v-stage] { background: var(--v-canvas); display: flex; align-items: center; }
+  .tl__rail { padding-inline: var(--v-gutter) calc(var(--v-gutter) * 2); gap: 0; position: relative; align-items: stretch; }
+  .tl__rail::before { content: ""; position: absolute; left: var(--v-gutter); right: 0; top: 7.4rem; height: 1px; background: var(--v-hair-strong); }
+  .tl__intro { width: min(86vw, 24rem); flex: none; padding-right: var(--v-7); padding-top: 4rem; }
+  .tl__intro h2 { font-size: var(--v-t-2xl); }
+  .tl__intro p { margin-top: var(--v-4); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 34ch; }
+  .tl__card { width: min(78vw, 25rem); flex: none; padding-right: var(--v-7); position: relative; }
+  .tl__card::before { content: ""; position: absolute; left: 0; top: 7.4rem; width: 9px; height: 9px; margin-top: -4px; border-radius: 50%; background: var(--v-accent); }
+  .tl__era { display: block; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); height: 7.4rem; padding-top: 4rem; }
+  .tl__card h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-3xl); line-height: 1; letter-spacing: -.02em; margin-top: var(--v-5); font-variant-numeric: lining-nums; }
+  .tl__card h3.tl__text { font-size: var(--v-t-xl); line-height: 1.1; }
+  .tl__card h4 { font-weight: 600; font-size: var(--v-t-base); margin-top: var(--v-4); }
+  .tl__card p { margin-top: var(--v-2); color: var(--v-ink-soft); font-size: var(--v-t-base); max-width: 32ch; text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .tl [data-v-stage] { display: block; padding-block: var(--v-8) var(--v-5); }
+    .tl__rail::before { top: 3.4rem; left: 0; }
+    .tl__rail { padding-inline: var(--v-gutter) var(--v-gutter); }
+    .tl__intro { padding-top: 0; }
+    .tl__era { height: 3.4rem; padding-top: 0; }
+    .tl__card::before { top: 3.4rem; }
+    .tl__intro { padding-bottom: var(--v-5); }
+  }
+
+  /* ---- акт 3: достижения и выставки ----------------------------------------------------------- */
+  .ach { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--v-9); align-items: start; }
+  .ach__head { position: sticky; top: 6rem; }
+  .ach__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 36ch; }
+  .ledger { border-top: 1px solid var(--v-hair-strong); }
+  .ledger li { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--v-5); align-items: baseline; padding: var(--v-5) 0; border-bottom: 1px solid var(--v-hair); }
+  .ledger b { font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-2xl); line-height: 1; letter-spacing: -.03em; font-variant-numeric: lining-nums; }
+  .ledger b.is-word { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); line-height: 1.1; letter-spacing: -.01em; }
+  .ledger li { grid-template-columns: 11rem 1fr; }
+  .ledger li > span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 38ch; }
+  .shows { margin-top: var(--v-7); padding: var(--v-5) var(--v-5) var(--v-5); border: 1px dashed var(--v-hair-strong); border-radius: var(--v-radius); }
+  .shows h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); }
+  .shows p { margin-top: var(--v-2); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; }
+  @media (max-width: 860px) {
+    .ach { grid-template-columns: 1fr; gap: var(--v-6); }
+    .ach__head { position: static; }
+    .ledger li { grid-template-columns: 1fr; gap: var(--v-2); }
+  }
+
+  /* ---- акт 4: чем отличается, тёмная сцена ------------------------------------------------------- */
+  .utp [data-v-stage] { background: #0d1e25; --v-ink: #e8ece6; --v-ink-soft: #a6b8b6; color: #e8ece6; }
+  .utp__img { position: absolute; z-index: 1; right: 0; top: 0; bottom: 0; width: 46%; }
+  .utp__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+  .utp__img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, #0d1e25 0%, rgb(13 30 37 / 0) 38%); }
+  .utp__title { position: absolute; z-index: 3; left: var(--v-gutter); top: clamp(5.5rem, 14vh, 8rem); max-width: 28rem; }
+  .utp__title h2 { font-size: var(--v-t-2xl); color: var(--v-ink); }
+  .utp__item { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(3.5rem, 14vh, 8rem); width: min(34rem, 48vw); }
+  .utp__item h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-2xl); line-height: 1.08; letter-spacing: -.012em; color: var(--v-ink); text-wrap: balance; }
+  .utp__item p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 40ch; }
+  .utp__dots { position: absolute; z-index: 3; left: var(--v-gutter); bottom: clamp(1.5rem, 5vh, 3rem); display: flex; gap: .5rem; }
+  .utp__dots i { width: 1.6rem; height: 2px; background: var(--v-hair-strong); }
+  @media (max-width: 860px) {
+    .utp__img { width: 100%; bottom: 50svh; }
+    .utp__img::after { background: linear-gradient(to top, #0d1e25 0%, rgb(13 30 37 / 0) 60%); }
+    .utp__title { top: 4.6rem; }
+    .utp__title h2 { font-size: var(--v-t-xl); }
+    .utp__item { width: auto; right: var(--v-gutter); bottom: clamp(2.5rem, 8svh, 4rem); }
+    .utp__item h3 { font-size: var(--v-t-xl); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .utp { height: auto; }
+    .utp [data-v-stage] { position: static; height: auto; padding: 6rem var(--v-gutter) 3rem; }
+    .utp__img, .utp__title, .utp__item, .utp__dots { position: static; width: auto; }
+    .utp__img { height: 22rem; margin-block: var(--v-5); }
+    .utp__item { margin-top: var(--v-6); }
+    .utp__dots { display: none; }
+  }
+
+  /* ---- акт 5: финал --------------------------------------------------------------------------- */
+  .fin { display: grid; grid-template-columns: 1.05fr .95fr; gap: var(--v-9); align-items: center; min-height: 100svh; padding-block: clamp(6rem, 14vh, 9rem) var(--v-9); }
+  .fin h2 { font-size: var(--v-t-3xl); max-width: 14ch; }
+  .fin p { margin-top: var(--v-5); color: var(--v-ink-soft); max-width: 46ch; }
+  .fin .v-btn { margin-top: var(--v-6); }
+  .fin__where { margin-top: var(--v-7); padding-top: var(--v-4); border-top: 1px solid var(--v-hair-strong); font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 52ch; }
+  .fin__where b { display: block; color: var(--v-ink); font-weight: 600; margin-bottom: .3em; }
+  .fin__fig { border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); aspect-ratio: 4 / 5; }
+  .fin__fig img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 860px) {
+    .fin { grid-template-columns: 1fr; gap: var(--v-7); min-height: 0; padding-block: var(--v-8); }
+    .fin__fig { aspect-ratio: 4 / 3; order: -1; }
+  }
+  .foot { padding-block: var(--v-5); border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+  .foot .v-wrap { display: flex; justify-content: space-between; gap: var(--v-5); flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <div data-v-progress></div>
+
+  <header class="top">
+    <a class="top__mark" href="#top"><i></i>Caviar Care</a>
+    <nav aria-label="Разделы страницы">
+      <a href="#istoriya">Хронология</a>
+      <a href="#dostizheniya">Достижения</a>
+      <a href="#otlichiya">Отличия</a>
+    </nav>
+    <a class="v-btn" href="#katalog" data-stub="ссылка-каталога">Смотреть коллекцию</a>
+  </header>
+
+  <main id="top">
+
+    <!-- 1 · ПЕРВЫЙ ЭКРАН -->
+    <section class="hero" data-v-act="pin" data-v-span="2.2" data-v-drift="#e8ece6" aria-label="Первый экран">
+      <div data-v-stage>
+        <div class="v-fill" data-v-parallax="-0.3"><img src="assets/cover.webp" alt="Пруд осетрового хозяйства на рассвете: неподвижная вода и туман" width="1920" height="1080"></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+        <div class="hero__copy" data-v-cue="0 0.82 0">
+          <span class="demo-for" data-stub="демо для заказчика">Демо-страница для заказчика по заказу «Создать новую страницу на tilda»</span>
+          <h1 class="v-display v-display--xl">От осетровой фермы до крема</h1>
+          <p class="v-lede">История бренда в датах: с 1978 года до выхода коллекции в ноябре 2025.</p>
+          <a class="v-btn" href="#katalog" data-stub="ссылка-каталога">Смотреть коллекцию</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ХРОНОЛОГИЯ -->
+    <section class="tl" id="istoriya" data-v-act="pan" data-v-span="4.2" data-v-drift="#e8ece6" aria-label="Хронология бренда">
+      <div data-v-stage>
+        <div class="tl__rail" data-v-pan="0.05">
+          <div class="tl__intro">
+            <h2 class="v-display v-display--md">Хронология бренда</h2>
+            <p>Пять точек пути, от идеи до коллекции на полке. Даты и факты из статьи об истории бренда.</p>
+          </div>
+          <article class="tl__card">
+            <span class="tl__era">Откуда идея</span>
+            <h3 class="tl__text">Идея из Парижа</h3>
+            <h4>Руки женщин с побережья</h4>
+            <p>Владелица парижского института красоты Ингрид Милле обратила внимание: у женщин, разделывавших рыбу на побережье, лица были обветренными, а руки оставались гладкими.</p>
+          </article>
+          <article class="tl__card">
+            <span class="tl__era">Начало</span>
+            <h3 class="v-nums">1978</h3>
+            <h4>Рыбоводство</h4>
+            <p>Группа «Русский Икорный Дом» начинает работать в рыбоводстве.</p>
+          </article>
+          <article class="tl__card">
+            <span class="tl__era">Своё хозяйство</span>
+            <h3 class="v-nums">1996</h3>
+            <h4>Осетры своего выращивания</h4>
+            <p>Компания начинает выращивать осетровых сама.</p>
+          </article>
+          <article class="tl__card">
+            <span class="tl__era">Результат разработки</span>
+            <h3 class="v-nums">2024</h3>
+            <h4>Активы из икры</h4>
+            <p>Больше десяти лет уходит на разработку. В 2024 году российские учёные получают результат, который ложится в основу бренда.</p>
+          </article>
+          <article class="tl__card">
+            <span class="tl__era">На рынке</span>
+            <h3 class="tl__text">Ноябрь 2025</h3>
+            <h4>Выход коллекции</h4>
+            <p>Коллекция выходит на рынок России: 11 средств, в основе четыре икорных актива.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ДОСТИЖЕНИЯ И ВЫСТАВКИ -->
+    <section class="v-section" id="dostizheniya" data-v-act="flow" data-v-drift="#e2e8e1" aria-label="Достижения и выставки">
+      <div class="v-wrap ach">
+        <div class="ach__head" data-v-in>
+          <h2 class="v-display v-display--lg">Достижения и выставки</h2>
+          <p>То, что бренд может подтвердить: цифры из статьи, сертификаты на сайте, участие в выставках.</p>
+        </div>
+        <div data-v-in data-v-stagger="60">
+          <ul class="ledger">
+            <li><b class="v-nums"><span data-v-count="0 11">11</span></b><span>средств в коллекции</span></li>
+            <li><b class="v-nums"><span data-v-count="0 4">4</span></b><span>икорных актива из икры собственного производства</span></li>
+            <li><b class="v-nums">20+</b><span>стран, куда экспортирует группа «Русский Икорный Дом»</span></li>
+            <li><b class="is-word">Метка</b><span>У каждой рыбы индивидуальная электронная метка</span></li>
+            <li><b class="is-word">Исследования</b><span>Клинические исследования и сертификация по международным стандартам. Сертификаты размещены на сайте.</span></li>
+          </ul>
+          <div class="shows" data-stub="выставки">
+            <h3>Выставки и награды</h3>
+            <p>Здесь появится список выставок, где участвовал бренд: название и год. В статье их нет, ждём список от заказчика.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ЧЕМ ОТЛИЧАЕТСЯ -->
+    <section class="utp" id="otlichiya" data-v-act="pin" data-v-span="3.6" data-v-drift="#0d1e25" aria-label="Отличия бренда">
+      <div data-v-stage>
+        <div class="utp__img" data-v-parallax="-0.4"><img src="assets/caviar.webp" alt="Чёрная осетровая икра крупным планом" width="1200" height="1600" loading="lazy"></div>
+        <div class="utp__title"><h2 class="v-display v-display--md">Чем бренд отличается</h2></div>
+        <div class="utp__item" data-v-cue="0 0.22 0 0.05">
+          <h3>От икринки до готового крема</h3>
+          <p>Своё осетроводческое предприятие в Вологодской области, получение икры, извлечение активных компонентов и состав каждого средства.</p>
+        </div>
+        <div class="utp__item" data-v-cue="0.2 0.42 0.05 0.05">
+          <h3>Прижизненный метод</h3>
+          <p>Икру получают так, что рыба остаётся живой.</p>
+        </div>
+        <div class="utp__item" data-v-cue="0.4 0.62 0.05 0.05">
+          <h3>Высокая концентрация активов</h3>
+          <p>Например, в икорном масле для лица до 10% пропиленгликолевого экстракта.</p>
+        </div>
+        <div class="utp__item" data-v-cue="0.6 0.82 0.05 0.05">
+          <h3>Запах устраняют, а не маскируют</h3>
+          <p>Сначала научились устранять сам запах на этапе переработки сырья. Крем для кожи вокруг глаз выпущен без отдушки.</p>
+        </div>
+        <div class="utp__item" data-v-cue="0.8 1 0.05 0">
+          <h3>Подходит чувствительной коже</h3>
+          <p>Гидролизат лишён аллергенных белков.</p>
+        </div>
+        <div class="utp__dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- 5 · ФИНАЛ -->
+    <section class="v-section v-section--tight" id="katalog" data-v-act="flow" data-v-drift="#e8ece6" aria-label="Коллекция">
+      <div class="v-wrap fin">
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Коллекция вышла на рынок в ноябре 2025</h2>
+          <p>Одиннадцать средств на основе четырёх икорных активов: дневные и ночные кремы, сыворотки, масло, маски, пилинг.</p>
+          <a class="v-btn" href="#katalog" data-stub="ссылка-каталога">Смотреть коллекцию</a>
+          <p class="fin__where"><b>Где купить</b>«Золотое Яблоко» с доставкой по России, бутики «Артиколи», «Весна», ГУМ, зоны бренда в аэропортах Домодедово и Шереметьево.</p>
+        </div>
+        <figure class="fin__fig" data-v-reveal="up" data-v-reveal-at="0.1 0.5"><img src="assets/cream.webp" alt="Крем кремово-жемчужного цвета на тёмном камне" width="1600" height="1200" loading="lazy"></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="v-wrap">
+      <span>Демо-страница для заказчика. Тексты и даты взяты из статьи об истории бренда.</span>
+      <span>Шрифты и цвета будут приведены к сайту заказчика.</span>
+    </div>
+  </footer>
+</div>
+<script src="vibe.js"></script>
+<script>Vibe.mount(document.querySelector('.v-page'));</script>
+</body>
+</html>
