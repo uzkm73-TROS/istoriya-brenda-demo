@@ -72,41 +72,41 @@
     .demo-for { margin-bottom: var(--v-3); }
   }
 
-  /* ---- акт 2: хронология, лента ---------------------------------------------------------- */
-  .tl [data-v-stage] { background: var(--v-canvas); display: flex; align-items: center; }
-  .tl__rail { padding-inline: var(--v-gutter) calc(var(--v-gutter) * 2); gap: 0; position: relative; align-items: stretch; }
-  .tl__rail::before { content: ""; position: absolute; left: var(--v-gutter); right: 0; top: 7.4rem; height: 1px; background: var(--v-hair-strong); }
-  .tl__intro { width: min(86vw, 24rem); flex: none; padding-right: var(--v-7); padding-top: 4rem; }
-  .tl__intro h2 { font-size: var(--v-t-2xl); }
-  .tl__intro p { margin-top: var(--v-4); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 34ch; }
-  .tl__card { width: min(78vw, 25rem); flex: none; padding-right: var(--v-7); position: relative; }
-  .tl__card::before { content: ""; position: absolute; left: 0; top: 7.4rem; width: 9px; height: 9px; margin-top: -4px; border-radius: 50%; background: var(--v-accent); }
-  .tl__era { display: block; font-size: var(--v-t-xs); letter-spacing: var(--v-track-wide); text-transform: uppercase; color: var(--v-ink-soft); height: 7.4rem; padding-top: 4rem; }
-  .tl__card h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-3xl); line-height: 1; letter-spacing: -.02em; margin-top: var(--v-5); font-variant-numeric: lining-nums; }
-  .tl__card h3.tl__text { font-size: var(--v-t-xl); line-height: 1.1; }
-  .tl__card h4 { font-weight: 600; font-size: var(--v-t-base); margin-top: var(--v-4); }
-  .tl__card p { margin-top: var(--v-2); color: var(--v-ink-soft); font-size: var(--v-t-base); max-width: 32ch; text-wrap: pretty; }
+  /* ---- акт 2: цифры и вступление ---------------------------------------------------------- */
+  .stats { padding-block: var(--v-8) var(--v-6); }
+  .stats__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-6); border-top: 1px solid var(--v-hair-strong); padding-top: var(--v-6); }
+  .stats__row b { display: block; font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-3xl); line-height: 1; letter-spacing: -.035em; font-variant-numeric: lining-nums; }
+  .stats__row span { display: block; margin-top: var(--v-3); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 26ch; text-wrap: pretty; }
+  .lead { display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--v-9); align-items: end; padding-block: var(--v-9) var(--v-7); }
+  .lead h2 { font-size: var(--v-t-2xl); max-width: 22ch; }
+  .lead p { color: var(--v-ink-soft); max-width: 40ch; }
   @media (max-width: 860px) {
-    .tl [data-v-stage] { display: block; padding-block: var(--v-8) var(--v-5); }
-    .tl__rail::before { top: 3.4rem; left: 0; }
-    .tl__rail { padding-inline: var(--v-gutter) var(--v-gutter); }
-    .tl__intro { padding-top: 0; }
-    .tl__era { height: 3.4rem; padding-top: 0; }
-    .tl__card::before { top: 3.4rem; }
-    .tl__intro { padding-bottom: var(--v-5); }
+    .stats__row { grid-template-columns: 1fr 1fr; gap: var(--v-6) var(--v-5); }
+    .lead { grid-template-columns: 1fr; gap: var(--v-4); padding-block: var(--v-8) var(--v-6); }
   }
 
-  /* ---- акт 3: достижения и выставки ----------------------------------------------------------- */
+  /* ---- акт 3: хронология, годы слева, события справа ------------------------------------------------ */
+  .tline { border-top: 1px solid var(--v-hair-strong); }
+  .tline__row { display: grid; grid-template-columns: minmax(10rem, .75fr) 1.25fr; gap: var(--v-7); padding: var(--v-7) 0; border-bottom: 1px solid var(--v-hair); }
+  .tline__year { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-3xl); line-height: 1; letter-spacing: -.02em; font-variant-numeric: lining-nums; align-self: start; position: sticky; top: 6rem; }
+  .tline__year.is-word { font-size: var(--v-t-2xl); line-height: 1.05; }
+  .tline__entries { display: grid; gap: var(--v-6); max-width: 46rem; }
+  .tline__entries h3 { font-family: var(--v-font-text); font-weight: 600; font-size: var(--v-t-lg); line-height: 1.2; letter-spacing: -.005em; }
+  .tline__entries p { margin-top: var(--v-2); color: var(--v-ink-soft); max-width: 52ch; text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .tline__row { grid-template-columns: 1fr; gap: var(--v-4); padding: var(--v-6) 0; }
+    .tline__year { position: static; }
+  }
+
+  /* ---- акт 4: достижения и выставки ----------------------------------------------------------- */
   .ach { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--v-9); align-items: start; }
   .ach__head { position: sticky; top: 6rem; }
   .ach__head p { margin-top: var(--v-4); color: var(--v-ink-soft); max-width: 36ch; }
   .ledger { border-top: 1px solid var(--v-hair-strong); }
-  .ledger li { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--v-5); align-items: baseline; padding: var(--v-5) 0; border-bottom: 1px solid var(--v-hair); }
-  .ledger b { font-family: var(--v-font-text); font-weight: 500; font-size: var(--v-t-2xl); line-height: 1; letter-spacing: -.03em; font-variant-numeric: lining-nums; }
-  .ledger b.is-word { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); line-height: 1.1; letter-spacing: -.01em; }
-  .ledger li { grid-template-columns: 11rem 1fr; }
-  .ledger li > span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 38ch; }
-  .shows { margin-top: var(--v-7); padding: var(--v-5) var(--v-5) var(--v-5); border: 1px dashed var(--v-hair-strong); border-radius: var(--v-radius); }
+  .ledger li { display: grid; grid-template-columns: 11rem 1fr; gap: var(--v-5); align-items: baseline; padding: var(--v-5) 0; border-bottom: 1px solid var(--v-hair); }
+  .ledger b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); line-height: 1.1; letter-spacing: -.01em; }
+  .ledger li > span { color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 44ch; }
+  .shows { margin-top: var(--v-7); padding: var(--v-5); border: 1px dashed var(--v-hair-strong); border-radius: var(--v-radius); }
   .shows h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); }
   .shows p { margin-top: var(--v-2); color: var(--v-ink-soft); font-size: var(--v-t-sm); max-width: 46ch; }
   @media (max-width: 860px) {
@@ -191,62 +191,76 @@
       </div>
     </section>
 
-    <!-- 2 · ХРОНОЛОГИЯ -->
-    <section class="tl" id="istoriya" data-v-act="pan" data-v-span="4.2" data-v-drift="#e8ece6" aria-label="Хронология бренда">
-      <div data-v-stage>
-        <div class="tl__rail" data-v-pan="0.05">
-          <div class="tl__intro">
-            <h2 class="v-display v-display--md">Хронология бренда</h2>
-            <p>Пять точек пути, от идеи до коллекции на полке. Даты и факты из статьи об истории бренда.</p>
+    <!-- 2 · ЦИФРЫ И ВСТУПЛЕНИЕ -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#e8ece6" aria-label="Бренд в цифрах">
+      <div class="v-wrap">
+        <div class="stats" data-v-in data-v-stagger="80">
+          <div class="stats__row">
+            <p><b class="v-nums">1978</b><span>год, когда группа «Русский Икорный Дом» начала работать в рыбоводстве</span></p>
+            <p><b class="v-nums">20+</b><span>стран экспорта группы</span></p>
+            <p><b class="v-nums">4</b><span>икорных актива из икры собственного производства</span></p>
+            <p><b class="v-nums">11</b><span>средств в коллекции</span></p>
           </div>
-          <article class="tl__card">
-            <span class="tl__era">Откуда идея</span>
-            <h3 class="tl__text">Идея из Парижа</h3>
-            <h4>Руки женщин с побережья</h4>
-            <p>Владелица парижского института красоты Ингрид Милле обратила внимание: у женщин, разделывавших рыбу на побережье, лица были обветренными, а руки оставались гладкими.</p>
-          </article>
-          <article class="tl__card">
-            <span class="tl__era">Начало</span>
-            <h3 class="v-nums">1978</h3>
-            <h4>Рыбоводство</h4>
-            <p>Группа «Русский Икорный Дом» начинает работать в рыбоводстве.</p>
-          </article>
-          <article class="tl__card">
-            <span class="tl__era">Своё хозяйство</span>
-            <h3 class="v-nums">1996</h3>
-            <h4>Осетры своего выращивания</h4>
-            <p>Компания начинает выращивать осетровых сама.</p>
-          </article>
-          <article class="tl__card">
-            <span class="tl__era">Результат разработки</span>
-            <h3 class="v-nums">2024</h3>
-            <h4>Активы из икры</h4>
-            <p>Больше десяти лет уходит на разработку. В 2024 году российские учёные получают результат, который ложится в основу бренда.</p>
-          </article>
-          <article class="tl__card">
-            <span class="tl__era">На рынке</span>
-            <h3 class="tl__text">Ноябрь 2025</h3>
-            <h4>Выход коллекции</h4>
-            <p>Коллекция выходит на рынок России: 11 средств, в основе четыре икорных актива.</p>
-          </article>
+        </div>
+        <div class="lead" data-v-in data-v-stagger="80">
+          <h2 class="v-display v-display--md">Двадцать лет с икрой и больше десяти лет разработки</h2>
+          <p>Чтобы полезные вещества икры дошли до кожи, понадобились годы работы учёных, свой осетровый цикл и несколько решений, о которых бренд рассказывает сам.</p>
         </div>
       </div>
     </section>
 
-    <!-- 3 · ДОСТИЖЕНИЯ И ВЫСТАВКИ -->
+    <!-- 3 · ХРОНОЛОГИЯ -->
+    <section class="v-section v-section--tight" id="istoriya" data-v-act="flow" data-v-drift="#e8ece6" aria-label="Хронология бренда">
+      <div class="v-wrap">
+        <div class="tline">
+          <div class="tline__row" data-v-in>
+            <div class="tline__year is-word">Откуда идея</div>
+            <div class="tline__entries">
+              <div><h3>Руки женщин с побережья</h3><p>Владелица парижского института красоты Ингрид Милле обратила внимание: у женщин, разделывавших рыбу на побережье, лица были обветренными, а руки оставались гладкими.</p></div>
+            </div>
+          </div>
+          <div class="tline__row" data-v-in>
+            <div class="tline__year v-nums">1978</div>
+            <div class="tline__entries">
+              <div><h3>Рыбоводство</h3><p>Группа «Русский Икорный Дом» начинает работать в рыбоводстве.</p></div>
+            </div>
+          </div>
+          <div class="tline__row" data-v-in>
+            <div class="tline__year v-nums">1996</div>
+            <div class="tline__entries">
+              <div><h3>Осетры своего выращивания</h3><p>Компания начинает выращивать осетровых сама.</p></div>
+              <div><h3>Отбор рыбы для проекта</h3><p>Каждая рыба оснащена индивидуальной электронной меткой. Икра отобранных осетров показывает 70% выживаемости при тесте на репродуктивность.</p></div>
+            </div>
+          </div>
+          <div class="tline__row" data-v-in>
+            <div class="tline__year v-nums">2024</div>
+            <div class="tline__entries">
+              <div><h3>Десять лет разработки</h3><p>На решение задачи ушло более десяти лет. Результат, лёгший в основу бренда, получили российские учёные в 2024 году.</p></div>
+              <div><h3>От актива к формуле</h3><p>Полезные вещества зернистой икры сами по себе в кожу не проникают. Запах не маскировали: сначала научились устранять его на этапе переработки сырья.</p></div>
+            </div>
+          </div>
+          <div class="tline__row" data-v-in>
+            <div class="tline__year is-word">Ноябрь 2025</div>
+            <div class="tline__entries">
+              <div><h3>Выход коллекции</h3><p>Коллекция из одиннадцати формул вышла на рынок России. Крем для кожи вокруг глаз выпущен без отдушки.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ДОСТИЖЕНИЯ И ВЫСТАВКИ -->
     <section class="v-section" id="dostizheniya" data-v-act="flow" data-v-drift="#e2e8e1" aria-label="Достижения и выставки">
       <div class="v-wrap ach">
         <div class="ach__head" data-v-in>
           <h2 class="v-display v-display--lg">Достижения и выставки</h2>
-          <p>То, что бренд может подтвердить: цифры из статьи, сертификаты на сайте, участие в выставках.</p>
+          <p>Что бренд может подтвердить: метки у рыб, исследования и сертификаты, участие в выставках.</p>
         </div>
         <div data-v-in data-v-stagger="60">
           <ul class="ledger">
-            <li><b class="v-nums"><span data-v-count="0 11">11</span></b><span>средств в коллекции</span></li>
-            <li><b class="v-nums"><span data-v-count="0 4">4</span></b><span>икорных актива из икры собственного производства</span></li>
-            <li><b class="v-nums">20+</b><span>стран, куда экспортирует группа «Русский Икорный Дом»</span></li>
-            <li><b class="is-word">Метка</b><span>У каждой рыбы индивидуальная электронная метка</span></li>
-            <li><b class="is-word">Исследования</b><span>Клинические исследования и сертификация по международным стандартам. Сертификаты размещены на сайте.</span></li>
+            <li><b>Метка</b><span>У каждой рыбы индивидуальная электронная метка.</span></li>
+            <li><b>Исследования</b><span>Вся продукция прошла клинические исследования и сертификацию по международным стандартам.</span></li>
+            <li><b>Сертификаты</b><span>Сертификаты открыто размещены на сайте бренда.</span></li>
           </ul>
           <div class="shows" data-stub="выставки">
             <h3>Выставки и награды</h3>
